@@ -3,6 +3,7 @@ var app = express();
 var mongo = require("mongodb").MongoClient;
 var mongoURL = 'mongodb://localhost:27017/urlsDB';
 var URLverifier = require("./public/src/URLverifier");
+
 app.use(express.static('public'));
 
 app.get('/:short_url', (req, res, next) => {
